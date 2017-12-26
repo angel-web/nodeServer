@@ -1,7 +1,11 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('build'))
+app.use(express.static('build', {index: false}));
+
+app.get('/userlist', function (req, res) {
+  res.json({name: 'zm'})
+})
 
 app.get('*', function (req, res, next) {
   var options = {
@@ -13,19 +17,26 @@ app.get('*', function (req, res, next) {
     }
   };
 
-  var fileName = 'index.html';
-  res.sendFile(fileName, options, function (err) {
-    if (err) {
-      console.log(err);
-      res.status(err.status).end();
-    }
-    else {
-      // console.log('Sent:', fileName);
-    }
-  });
+  let fileName = 'index.html';
+  let hostname = req.hostname;
+  if (hostname === 'localhost' || hostname === 'www.webxiaobai.top') {
+    res.sendFile(fileName, options, function (err) {
+      if (err) {
+        console.log(err);
+        res.status(err.status).end();
+      }
+      else {
+        // console.log('Sent:', fileName);
+      }
+    });
+  } else if (hostname === 'webxiaobai.top') {
+    res.redirect(fileName)
+  } else {
+    res.status(400).send('Bad Request 404');
+  }
 })
 
-var server = app.listen(3000, function () {
+var server = app.listen(80, function () {
   var host = server.address().address;
   var port = server.address().port;
 
