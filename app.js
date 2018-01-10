@@ -1,6 +1,10 @@
 var express = require('express');
 var app = express();
 
+// api
+let articleList = require('./api/article.js');
+app.use('/api/article/list', articleList)
+
 app.use(express.static('build', {index: false}));
 
 app.get('/userlist', function (req, res) {
