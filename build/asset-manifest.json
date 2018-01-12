@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.51c829d4.css",
-  "main.css.map": "static/css/main.51c829d4.css.map",
-  "main.js": "static/js/main.9220281e.js",
-  "main.js.map": "static/js/main.9220281e.js.map",
+  "main.css": "static/css/main.ca139195.css",
+  "main.css.map": "static/css/main.ca139195.css.map",
+  "main.js": "static/js/main.5355a958.js",
+  "main.js.map": "static/js/main.5355a958.js.map",
   "static\\media\\01.jpg": "static/media/01.566ab75f.jpg",
   "static\\media\\02.jpg": "static/media/02.64d42142.jpg",
   "static\\media\\03.jpg": "static/media/03.581b8d7f.jpg",
@@ -16,6 +16,7 @@
   "static\\media\\logo.jpg": "static/media/logo.3f851877.jpg",
   "static\\media\\navbg.jpg": "static/media/navbg.a05cc115.jpg",
   "static\\media\\navbg.png": "static/media/navbg.dd0c1869.png",
+  "static\\media\\react_img.png": "static/media/react_img.f47abcd5.png",
   "static\\media\\rtitbg.png": "static/media/rtitbg.29b4242f.png",
   "static\\media\\topbg.jpg": "static/media/topbg.c2e43db6.jpg",
   "static\\media\\yuanshan.jpg": "static/media/yuanshan.ae7aa48e.jpg"

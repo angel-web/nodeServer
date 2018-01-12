@@ -8,4 +8,10 @@ router.get('/', function (req, res) {
   })
 });
 
+router.get('/recommend', function (req, res) {
+  mysqlGetData('select * from article WHERE type="recommend"', function (err, rows, fields) {
+    res.json(rows);
+  })
+});
+
 module.exports = router;
